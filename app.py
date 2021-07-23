@@ -1,4 +1,3 @@
-import base64
 from fer.fer import top_emotion
 from flask import Flask, json, request
 from fer import FER
@@ -7,7 +6,7 @@ from flask_restful import Api, Resource
 from flask_cors import CORS
 from flask_jsonpify import jsonify, jsonpify
 import numpy as np
-import numpy as np
+
 
 
 
@@ -39,8 +38,6 @@ class getEmotion(Resource):
 api.add_resource(head, '/')
 api.add_resource(getEmotion, '/getEmotion/<path:url>')
 
-
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
 
